@@ -1,3 +1,58 @@
-h1 {
+@import url(http://fonts.googleapis.com/css?family=Orbitron:400,700);
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+.container {
+	background-color: black;
+	color: red;
+	font-family: 'Indie Flower', cursive;
+	margin: 0 auto;
+	max-width: 960px;
 	text-align: center;
+	padding: 20px;
+	left: 200px;
+}
+
+table {
+	display: inline-block;
+	padding: 20px;
+}
+
+button {
+	font-family: 'Indie Flower', cursive;
+	font-size: 2em;
+	height: 70px;
+	width: 100px;
+	background-color: yellow;
+	color: grey;
+	border-radius: 10%;
+	border: 1px solid black;
+}
+
+button.active {
+	background-color: red;
+	color: black;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 3em;
+
+}
+
+td {
+	font-family: 'Indie Flower', cursive;
+	font-size: 2em;
+	height: 100px;
+	width: 100px;
+	background-color: teal;
+	border-radius: 10%;
+	border: 1px solid black;
+}
+
+td:hover{
+	background-color: pink;
+}
+
+.visited {
+	background-color: gainsboro;
+	color: blue;
+	pointer-events: none;
 }
