@@ -98,6 +98,7 @@ var game = {
 		$( '#board td' ).text("");
 		$( '#board td' ).unbind( "mouseenter mouseleave" );
 		$( '#board td' ).removeClass( 'visited' );
+		$( '#board td').removeClass( 'notAllowed' );
 		$( '#zero' ).removeClass( 'active' );
 		$( '#cross' ).removeClass( 'active' );
 		$( '#message' ).html( "" );
@@ -108,28 +109,36 @@ var game = {
 	checkWin: function ( winner, nextMove ) {
 		if ( game.scoreStore[0][0] === game.scoreStore[0][1] && game.scoreStore[0][0] === game.scoreStore[0][2] && game.scoreStore[0][1] === game.scoreStore[0][2] ) {
 			$( '#message' ).html( winner + " wins!" );
-			game.win = true;	
+			game.win = true;
+			$( '.row .col').addClass( 'notAllowed' );	
 		} else if ( game.scoreStore[1][0] === game.scoreStore[1][1] && game.scoreStore[1][0] === game.scoreStore[1][2] && game.scoreStore[1][1] === game.scoreStore[1][2] ) {
 			$( '#message' ).html( winner + " wins!" );
-			game.win = true;			
+			game.win = true;
+			$( '.row .col').addClass( 'notAllowed' );			
 		} else if ( game.scoreStore[2][0] === game.scoreStore[2][1] && game.scoreStore[2][0] === game.scoreStore[2][2] && game.scoreStore[2][1] === game.scoreStore[2][2] ) {			
 			$( '#message' ).html( winner + " wins!" );
-			game.win = true;			
+			game.win = true;
+			$( '.row .col').addClass( 'notAllowed' );			
 		} else if ( game.scoreStore[0][0] === game.scoreStore[1][0] && game.scoreStore[0][0] === game.scoreStore[2][0] && game.scoreStore[1][0] === game.scoreStore[2][0] ) {			
 			$( '#message' ).html( winner + " wins!" );
-			game.win = true;			
+			game.win = true;
+			$( '.row .col').addClass( 'notAllowed' );			
 		} else if ( game.scoreStore[0][1] === game.scoreStore[1][1] && game.scoreStore[0][1] === game.scoreStore[2][1] && game.scoreStore[1][1] === game.scoreStore[2][1] ) {			
 			$( '#message' ).html( winner + " wins!" );
-			game.win = true;			
+			game.win = true;
+			$( '.row .col').addClass( 'notAllowed' );			
 		} else if ( game.scoreStore[0][2] === game.scoreStore[1][2] && game.scoreStore[0][2] === game.scoreStore[2][2] && game.scoreStore[1][2] === game.scoreStore[2][2] ) {			
 			$( '#message' ).html( winner + " wins!" );
-			game.win = true;			
+			game.win = true;
+			$( '.row .col').addClass( 'notAllowed' );			
 		} else if ( game.scoreStore[0][0] === game.scoreStore[1][1] && game.scoreStore[0][0] === game.scoreStore[2][2] && game.scoreStore[1][1] === game.scoreStore[2][2] ) {			
 			$( '#message' ).html( winner + " wins!" );
-			game.win = true;			
+			game.win = true;
+			$( '.row .col').addClass( 'notAllowed' );			
 		} else if ( game.scoreStore[2][0] === game.scoreStore[1][1] && game.scoreStore[2][0] === game.scoreStore[0][2] && game.scoreStore[1][1] === game.scoreStore[0][2] ) {			
 			$( '#message' ).html( winner + " wins!" );
 			game.win = true;
+			$( '.row .col').addClass( 'notAllowed' );
 		//for no winner			
 		} else if ( game.counter === 9 && game.win === false ) {			
 			$( '#message' ).html( "No winner!" );	

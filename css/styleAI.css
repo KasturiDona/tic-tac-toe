@@ -2,8 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 .container {
-	background-color: black;
-	color: red;
+	background-color: gainsboro;
+	color: blue;
 	font-family: 'Indie Flower', cursive;
 	margin: 0 auto;
 	max-width: 960px;
@@ -26,8 +26,8 @@ button {
 	font-size: 2em;
 	height: 70px;
 	width: 100px;
-	background-color: yellow;
-	color: grey;
+	background-color: teal;
+	color: yellow;
 	border-radius: 10%;
 	border: 1px solid black;
 }
@@ -50,7 +50,7 @@ td {
 	font-size: 2em;
 	height: 100px;
 	width: 100px;
-	background-color: teal;
+	background-color: black;
 	border-radius: 10%;
 	border: 1px solid black;
 }
@@ -60,12 +60,8 @@ td:hover{
 }
 
 .visited {
-	background-color: gainsboro;
-	color: blue;
-	pointer-events: none;
-}
-
-.notAllowed {
+	background-color: yellow;
+	color: red;
 	pointer-events: none;
 }
 
