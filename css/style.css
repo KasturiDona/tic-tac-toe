@@ -53,6 +53,7 @@ td {
 	background-color: teal;
 	border-radius: 10%;
 	border: 1px solid black;
+	color: teal;
 }
 
 td:hover{
@@ -62,6 +63,8 @@ td:hover{
 .visited {
 	background-color: gainsboro;
 	color: blue;
+	font-size: 3em;
+	font-weight: bold;
 	pointer-events: none;
 }
 
@@ -72,10 +75,6 @@ td:hover{
 #message {
 	font-size: 3em;
 	font-weight: bold;
-}
-
-.theButtons {
-
 }
 
 .blink {

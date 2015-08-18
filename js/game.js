@@ -68,7 +68,7 @@ var game = {
 
 	//when the player selects the X move it places the piece X at the cell clicked
 	playCross: function ( element ) {
-			$( element ).text( 'X' );
+			$( element ).text( 'X' ).css( 'color', 'red' );
 			$( element ).addClass( 'visited' );
 		    $( '#zero, #cross' ).toggleClass( 'active' );
 		    var $rowIndex = $(element).parent().index();
@@ -95,7 +95,7 @@ var game = {
 		game.counter = 0;
 		game.win = false;
 		game.scoreStore = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
-		$( '#board td' ).text("");
+		$( '#board td' ).text("").removeAttr('style');
 		$( '#board td' ).unbind( "mouseenter mouseleave" );
 		$( '#board td' ).removeClass( 'visited' );
 		$( '#board td').removeClass( 'notAllowed' );
