@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 .container {
-	background-color: black;
+	background-color: #3E496C;
 	color: red;
 	font-family: 'Indie Flower', cursive;
 	margin: 0 auto;
@@ -10,10 +10,15 @@
 	text-align: center;
 	padding: 20px;
 	left: 200px;
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 3em;
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.8em;
 }
 
 table {
@@ -50,7 +55,7 @@ td {
 	font-size: 2em;
 	height: 100px;
 	width: 100px;
-	background-color: teal;
+	background-color: #47C370;
 	border-radius: 10%;
 	border: 1px solid black;
 	color: teal;
@@ -75,6 +80,21 @@ td:hover{
 #message {
 	font-size: 3em;
 	font-weight: bold;
+}
+
+.connect li {
+	display: inline;
+	padding: 20px;
+	font-size: 2em;
+}
+
+a {
+	text-decoration: none;
+	color: red;
+}
+
+a:hover {
+	color: #E3F9FE;
 }
 
 .blink {

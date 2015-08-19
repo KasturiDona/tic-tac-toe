@@ -2,8 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 .container {
-	background-color: gainsboro;
-	color: blue;
+	background-color: #BFF087;
+	color: #BE0082;
 	font-family: 'Indie Flower', cursive;
 	margin: 0 auto;
 	max-width: 960px;
@@ -12,8 +12,14 @@
 	left: 200px;
 }
 
+h1 {
+	font-size: 3em;
+}
+
 h3 {
-	font-size: 1.5em;
+	font-size: 1.8em;
+	margin: 0;
+	padding: 0;
 }
 
 table {
@@ -50,7 +56,7 @@ td {
 	font-size: 2em;
 	height: 100px;
 	width: 100px;
-	background-color: black;
+	background-color: #3E496C;
 	border-radius: 10%;
 	border: 1px solid black;
 }
@@ -63,6 +69,12 @@ td:hover{
 	background-color: yellow;
 	color: red;
 	pointer-events: none;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+.notAllowed {
+	pointer-events: none;
 }
 
 #message {
@@ -70,41 +82,17 @@ td:hover{
 	font-weight: bold;
 }
 
-.theButtons {
-
+.connect li {
+	display: inline;
+	padding: 20px;
+	font-size: 2em;
 }
 
-.blink {
-    -webkit-animation-name: blinker;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: linear;
-    -webkit-animation-iteration-count: infinite;
-    
-    -moz-animation-name: blinker;
-    -moz-animation-duration: 1s;
-    -moz-animation-timing-function: linear;
-    -moz-animation-iteration-count: infinite;
-    
-    animation-name: blinker;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
+a {
+	text-decoration: none;
+	color: #BE0082;
 }
 
-@-moz-keyframes blinker {  
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
-}
-
-@-webkit-keyframes blinker {  
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
-}
-
-@keyframes blinker {  
-    0% { opacity: 1.0; }
-    50% { opacity: 0.0; }
-    100% { opacity: 1.0; }
+a:hover {
+	color: blue;
 }

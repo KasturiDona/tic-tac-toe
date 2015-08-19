@@ -1,11 +1,10 @@
 # Tic Tac Toe
-- A two player game
-- AI game
+- home page
+- 1 player game
+- 2 player game
 
 ## Status
-- Initializing the game. Still under development
-- Completed the 2 player game
-- Developing the AI game
+- completed
 
 ## Bugs
 - None
