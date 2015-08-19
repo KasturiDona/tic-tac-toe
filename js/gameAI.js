@@ -91,7 +91,7 @@ var game = {
 	playZero: function (i, j) {
 		var list = ".row." + i + " ." + j;
 		$( list ).html('0');
-		$( list ).addClass( 'visited' );
+		$( list ).addClass( 'visited' ).addClass( 'appear' );
 		game.counter +=1;
 		game.checkWin( '0', 'x' );
 	},
@@ -228,6 +228,65 @@ var game = {
 			return;
 		}
 		
+		
+		//playing the diagonal if other 2 are 'x'
+		if ( game.scoreStore[0][2] === 'x' && game.scoreStore[1][1] === 'x' && ( game.scoreStore[2][0] !== '0' && game.scoreStore[2][0] !== 'x')) {
+			game.scoreStore[2][0] = '0';
+			game.playZero(2, 0);
+			return;
+		}
+		if ( game.scoreStore[0][0] === 'x' && game.scoreStore[1][1] === 'x' && ( game.scoreStore[2][2] !== '0' && game.scoreStore[2][2] !== 'x')) {
+			game.scoreStore[2][2] = '0';
+			game.playZero(2, 2);
+			return;
+		}
+
+		//forking the oponent's piece
+		if ( game.scoreStore[1][1] === '0' && (game.scoreStore[0][2] === 'x' && game.scoreStore[2][0] === 'x') || (game.scoreStore[0][0] === 'x' && game.scoreStore[2][2] === 'x')) {
+			if ( game.scoreStore[0][1] !== '0' && game.scoreStore[0][1] !== 'x' ) {
+				 game.scoreStore[0][1] = "0";
+				 game.playZero(0, 1);
+				 return;
+			}
+			if ( game.scoreStore[1][0] !== '0' && game.scoreStore[1][0] !== 'x' ) {
+				 game.scoreStore[1][0] = "0";
+				 game.playZero(1, 0);
+				 return;
+			}
+			if ( game.scoreStore[1][2] !== '0' && game.scoreStore[1][2] !== 'x' ) {
+				 game.scoreStore[1][2] = "0";
+				 game.playZero(1, 2);
+				 return;
+			}
+			if ( game.scoreStore[2][1] !== '0' && game.scoreStore[2][1] !== 'x' ) {
+				 game.scoreStore[2][1] = "0";
+				 game.playZero(2, 1);
+				 return;
+			}
+		}
+		
+		//playing the opposite corner
+		if ( game.scoreStore[0][0] === 'x' && ( game.scoreStore[2][2] !== '0' && game.scoreStore[2][2] !== 'x' ) ) {
+			game.scoreStore[2][2] = '0';
+			game.playZero(2,2);
+			return;
+		}
+		if ( ( game.scoreStore[0][0] !== '0' && game.scoreStore[0][0] !== 'x' ) && game.scoreStore[2][2] === "x" ) {
+			game.scoreStore[0][0] = '0';
+			game.playZero(0,0);
+			return;
+		}
+		if ( ( game.scoreStore[0][2] !== '0' && game.scoreStore[0][2] !== 'x' ) && game.scoreStore[2][0] === "x" ) {
+			game.scoreStore[0][2] = '0';
+			game.playZero(0,2);
+			return;
+		}
+		if ( game.scoreStore[0][2] === "x" && ( game.scoreStore[2][0] !== '0' && game.scoreStore[2][0] !== 'x' ) ) {
+			game.scoreStore[2][0] = '0';
+			game.playZero(2,0);
+			return;
+		}
+		
 		//playing an empty side
 		if ( game.scoreStore[0][1] !== '0' && game.scoreStore[0][1] !== 'x' ) {
 			game.scoreStore[0][1] = '0';
@@ -247,63 +306,6 @@ var game = {
 			return;
 		}
 
-		// //playing the diagonal if other 2 are 'x'
-		// if ( game.scoreStore[0][2] === 'x' && game.scoreStore[1][1] === 'x' && ( game.scoreStore[2][0] !== '0' && game.scoreStore[2][0] !== 'x')) {
-		// 	game.scoreStore[2][0] = '0';
-		// 	game.playZero(2, 0);
-		// 	return;
-		// }
-		// if ( game.scoreStore[0][0] === 'x' && game.scoreStore[1][1] === 'x' && ( game.scoreStore[2][2] !== '0' && game.scoreStore[2][2] !== 'x')) {
-		// 	game.scoreStore[2][2] = '0';
-		// 	game.playZero(2, 2);
-		// 	return;
-		// }
-
-		// //forking the oponent's piece
-		// if ( game.scoreStore[1][1] === '0' && (game.scoreStore[0][2] === 'x' && game.scoreStore[2][0] === 'x') || (game.scoreStore[0][0] === 'x' && game.scoreStore[2][2] === 'x')) {
-		// 	if ( game.scoreStore[0][1] !== '0' && game.scoreStore[0][1] !== 'x' ) {
-		// 		 game.scoreStore[0][1] = "0";
-		// 		 game.playZero(0, 1);
-		// 		 return;
-		// 	}
-		// 	if ( game.scoreStore[1][0] !== '0' && game.scoreStore[1][0] !== 'x' ) {
-		// 		 game.scoreStore[1][0] = "0";
-		// 		 game.playZero(1, 0);
-		// 		 return;
-		// 	}
-		// 	if ( game.scoreStore[1][2] !== '0' && game.scoreStore[1][2] !== 'x' ) {
-		// 		 game.scoreStore[1][2] = "0";
-		// 		 game.playZero(1, 2);
-		// 		 return;
-		// 	}
-		// 	if ( game.scoreStore[2][1] !== '0' && game.scoreStore[2][1] !== 'x' ) {
-		// 		 game.scoreStore[2][1] = "0";
-		// 		 game.playZero(2, 1);
-		// 		 return;
-		// 	}
-		// }
-		
-		// //playing the opposite corner
-		// if ( game.scoreStore[0][0] === 'x' && ( game.scoreStore[2][2] !== '0' && game.scoreStore[2][2] !== 'x' ) ) {
-		// 	game.scoreStore[2][2] = '0';
-		// 	game.playZero(2,2);
-		// 	return;
-		// }
-		// if ( ( game.scoreStore[0][0] !== '0' && game.scoreStore[0][0] !== 'x' ) && game.scoreStore[2][2] === "x" ) {
-		// 	game.scoreStore[0][0] = '0';
-		// 	game.playZero(0,0);
-		// 	return;
-		// }
-		// if ( ( game.scoreStore[0][2] !== '0' && game.scoreStore[0][2] !== 'x' ) && game.scoreStore[2][0] === "x" ) {
-		// 	game.scoreStore[0][2] = '0';
-		// 	game.playZero(0,2);
-		// 	return;
-		// }
-		// if ( game.scoreStore[0][2] === "x" && ( game.scoreStore[2][0] !== '0' && game.scoreStore[2][0] !== 'x' ) ) {
-		// 	game.scoreStore[2][0] = '0';
-		// 	game.playZero(2,0);
-		// 	return;
-		// }
 	},
 };
 

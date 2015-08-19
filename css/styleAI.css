@@ -71,10 +71,16 @@ td:hover{
 	pointer-events: none;
 	font-size: 3em;
 	font-weight: bold;
+	
 }
 
 .notAllowed {
 	pointer-events: none;
+}
+
+.visited.appear {
+	transition: all 1s ease-in-out;
+	
 }
 
 #message {
