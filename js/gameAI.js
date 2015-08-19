@@ -76,10 +76,7 @@ var game = {
 			$( '.row .col').addClass( 'notAllowed' );
 		//for no winner			
 		} else if ( game.counter === 9 && game.win === false ) {			
-			$( '#message' ).html( "No winner!" );	
-		//when game ends in a draw		
-		} else if ( game.counter === 9 && game.win === true ) {			
-			$( '#message' ).html( " Game ends in a draw!" );
+			$( '#message' ).html( "Draw!" );	
 		//calls for placing next move when none of the above criteria are met			
 		} else {
 			if ( nextMove === '0') {
@@ -231,24 +228,24 @@ var game = {
 			return;
 		}
 		
-		// //playing an empty side
-		// if ( game.scoreStore[0][1] !== '0' && game.scoreStore[0][1] !== 'x' ) {
-		// 	game.scoreStore[0][1] = '0';
-		// 	game.playZero(0,1);
-		// 	return;
-		// } else if ( game.scoreStore[1][0] !== '0' && game.scoreStore[1][0] !== 'x' ) {
-		// 	game.scoreStore[1][0] = '0';
-		// 	game.playZero(1,0);
-		// 	return;
-		// } else if ( game.scoreStore[1][2] !== '0' && game.scoreStore[1][2] !== 'x' ) {
-		// 	game.scoreStore[1][2] = '0';
-		// 	game.playZero(1,2);
-		// 	return;
-		// } else if ( game.scoreStore[2][1] !== '0' && game.scoreStore[2][1] !== 'x' ) {
-		// 	game.scoreStore[2][1] = '0';
-		// 	game.playZero(2,1);
-		// 	return;
-		// }
+		//playing an empty side
+		if ( game.scoreStore[0][1] !== '0' && game.scoreStore[0][1] !== 'x' ) {
+			game.scoreStore[0][1] = '0';
+			game.playZero(0,1);
+			return;
+		} else if ( game.scoreStore[1][0] !== '0' && game.scoreStore[1][0] !== 'x' ) {
+			game.scoreStore[1][0] = '0';
+			game.playZero(1,0);
+			return;
+		} else if ( game.scoreStore[1][2] !== '0' && game.scoreStore[1][2] !== 'x' ) {
+			game.scoreStore[1][2] = '0';
+			game.playZero(1,2);
+			return;
+		} else if ( game.scoreStore[2][1] !== '0' && game.scoreStore[2][1] !== 'x' ) {
+			game.scoreStore[2][1] = '0';
+			game.playZero(2,1);
+			return;
+		}
 
 		// //playing the diagonal if other 2 are 'x'
 		// if ( game.scoreStore[0][2] === 'x' && game.scoreStore[1][1] === 'x' && ( game.scoreStore[2][0] !== '0' && game.scoreStore[2][0] !== 'x')) {

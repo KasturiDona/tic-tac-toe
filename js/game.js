@@ -141,10 +141,7 @@ var game = {
 			$( '.row .col').addClass( 'notAllowed' );
 		//for no winner			
 		} else if ( game.counter === 9 && game.win === false ) {			
-			$( '#message' ).html( "No winner!" );	
-		//when game ends in a draw		
-		} else if ( game.counter === 9 && game.win === true ) {			
-			$( '#message' ).html( " Game ends in a draw!" );
+			$( '#message' ).html( "Draw!" );	
 		//calls for placing next move when none of the above criteria are met			
 		} else {
 			if ( nextMove === '0') {
