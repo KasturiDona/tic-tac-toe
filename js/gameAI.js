@@ -26,7 +26,6 @@ var game = {
 		var $colIndex = $( element ).index();
 	    game.counter +=1;
 	    game.scoreStore[$rowIndex][$colIndex] = 'x';
-	    console.log(game.scoreStore[$rowIndex][$colIndex]);
 	    game.checkWin( 'x', '0' );
 	},
 
@@ -119,7 +118,6 @@ var game = {
 				for ( var m = 0; m < 3; m++ ) {
 					if ( game.scoreStore[i][m] !== '0' && game.scoreStore[i][m] !== 'x' ) {
 						position = m;
-						console.log("M: " + m)
 						game.scoreStore[i][position] = '0';
 						game.playZero(i, position);
 						return;
@@ -139,7 +137,6 @@ var game = {
 				for ( var m = 0; m < 3; m++ ) {
 					if ( game.scoreStore[m][i] !== '0' && game.scoreStore[m][i] !== 'x' ) {
 						position = m;
-						console.log("M: " + m)
 						game.scoreStore[position][i] = '0';
 						game.playZero(position, i);
 						return;
