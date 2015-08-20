@@ -40,7 +40,6 @@ button {
 button.active {
 	background-color: red;
 	color: black;
-	text-decoration: underline;
 	font-weight: bold;
 	font-size: 3em;
 
@@ -114,6 +113,7 @@ a:hover {
     animation-iteration-count: infinite;
 }
 
+/*to make the buttons blink*/
 @-moz-keyframes blinker {  
     0% { opacity: 1.0; }
     50% { opacity: 0.0; }
