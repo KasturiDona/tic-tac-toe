@@ -1,3 +1,4 @@
+//the 2 player game
 //the 'game' object wraps in all the game code
 var game = {
 	//the counter calculates the number of moves

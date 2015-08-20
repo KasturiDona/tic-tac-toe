@@ -1,9 +1,9 @@
-
+/*css styles for te 2 player game*/
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 .container {
 	background-color: #3E496C;
-	color: red;
+	color: #FF5E6C;
 	font-family: 'Indie Flower', cursive;
 	margin: 0 auto;
 	max-width: 960px;
@@ -31,7 +31,7 @@ button {
 	font-size: 2em;
 	height: 70px;
 	width: 100px;
-	background-color: yellow;
+	background-color: #F6ED76;
 	color: grey;
 	border-radius: 10%;
 	border: 1px solid black;
@@ -90,7 +90,7 @@ td:hover{
 
 a {
 	text-decoration: none;
-	color: red;
+	color: #FF5E6C;
 }
 
 a:hover {

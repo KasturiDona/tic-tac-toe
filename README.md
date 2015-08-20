@@ -4,7 +4,7 @@
 - 2 player game
 
 ## Status
-- completed
+- completed both games
 
 ## Bugs
 - None

@@ -1,3 +1,4 @@
+//the 1 player game
 //the 'game' object wraps in all the game code
 var game = {
 	//the counter calculates the number of moves
@@ -12,6 +13,7 @@ var game = {
 		$( '#clear' ).on( 'click', this.clearBoard )
 	},
 
+	//placing the 'x'
 	placePiece: function () {
 		game.playCross( this );
 	},

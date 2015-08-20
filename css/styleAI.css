@@ -1,4 +1,4 @@
-
+/*css styles for the 1 player game*/
 @import url(http://fonts.googleapis.com/css?family=Indie+Flower);
 
 .container {
@@ -33,7 +33,7 @@ button {
 	height: 70px;
 	width: 100px;
 	background-color: teal;
-	color: yellow;
+	color: #F6ED76;
 	border-radius: 10%;
 	border: 1px solid black;
 }
@@ -62,11 +62,11 @@ td {
 }
 
 td:hover{
-	background-color: pink;
+	background-color: #FF5E6C;
 }
 
 .visited {
-	background-color: yellow;
+	background-color: #F6ED76;
 	color: red;
 	pointer-events: none;
 	font-size: 3em;
