@@ -22,8 +22,7 @@
 - The Clear Board button when clicked, refreshes the entire game for player(s) to start afresh
 
 ## Status
-- Completed both games
+- Completed
 
 ## Bugs
-- 1 player game : Uncaught TypeError: Cannot read property 'createDocumentFragment' of undefined ( This bug does not affect the game )
-- 2 player game: none
+- None
