@@ -5,11 +5,11 @@
 
 ## 1 player game
 - The computer always plays a '0'
-- The player plays a 'X'
+- The player plays an 'X'
 - First move belongs to the player
 
 ## 2 player game
-- Player1 needs to select the either 'X' or '0' button at the start of the game
+- Player1 needs to select either the 'X' or the '0' button at the start of the game
 - Once Player1 makes a selection, the buttons toggle between themselves automatically. Player2 does not need to select his/her move.
 
 ## Win / Lose / Draw
